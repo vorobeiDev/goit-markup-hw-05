@@ -360,9 +360,9 @@
           </p>
         </div>
         <div class="footer__social">
-          <p>
+          <h4 class="footer__title">
             Social media
-          </p>
+          </h4>
           <ul class="social social--footer">
             <li>
               <a href="#">
@@ -394,6 +394,22 @@
             </li>
           </ul>
         </div>
+        <div class="footer__notification">
+          <h4 class="footer__title">
+            Subscribe
+          </h4>
+          <form class="subscribe-form" name="subscribe-form">
+            <label>
+              <input type="email" placeholder="E-mail" />
+            </label>
+            <button class="button button--icon" type="submit" >
+              Subscribe
+              <svg>
+                <use href="./images/icons.svg#icon-telegram"></use>
+              </svg>
+            </button>
+          </form>
+        </div>
       </div>
     </div>
   </footer>
@@ -404,6 +420,60 @@
           <use href="./images/icons.svg#icon-close"></use>
         </svg>
       </button>
+      <h4>
+        Leave your contacts and we will call you back
+      </h4>
+      <form class="form" name="order-service-form">
+        <div class="form__fields">
+          <label class="form__label">
+            <span class="form__label-text">Name</span>
+            <span class="form__field">
+              <input type="text" name="name" autofocus />
+              <svg class="form__icon">
+                <use href="./images/icons.svg#icon-name"></use>
+              </svg>
+            </span>
+          </label>
+          <label class="form__label">
+            <span class="form__label-text">Phone</span>
+            <span class="form__field">
+              <input type="tel" name="phone" />
+              <svg class="form__icon">
+                <use href="./images/icons.svg#icon-phone"></use>
+              </svg>
+            </span>
+          </label>
+          <label class="form__label">
+            <span class="form__label-text">Email</span>
+            <span class="form__field">
+              <input type="email" name="email" />
+              <svg class="form__icon">
+                <use href="./images/icons.svg#icon-email"></use>
+              </svg>
+            </span>
+          </label>
+          <label class="form__label">
+            <span class="form__label-text">Comment</span>
+            <textarea rows="7" name="comment" placeholder="Text input"></textarea>
+          </label>
+        </div>
+        <div class="form__agree-checkbox">
+          <label>
+            <span class="checkbox">
+              <input type="checkbox" name="is_agree">
+              <span class="checkbox__wrapper">
+                <svg class="checkbox__icon">
+                  <use href="./images/icons.svg#icon-checkbox"></use>
+                </svg>
+              </span>
+            </span>
+            <span>
+              I accept the terms and conditions of the <a href="#" class="link">Privacy Policy</a>
+            </span>
+          </label>
+        </div>
+        <button class="button button--medium" type="submit">Send</button>
+      </form>
     </div>
   </div>
   <script src="./js/modal.js"></script>
