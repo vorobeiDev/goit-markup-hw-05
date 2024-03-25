@@ -106,11 +106,11 @@ h4 {
   border-bottom: 1px solid var(--accent-color);
 }
 
-.header__inner-wrapper {
+.header .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 4px 0;
+  padding: 4px 15px;
 }
 
 .header__nav {
@@ -119,7 +119,7 @@ h4 {
 }
 
 .logo {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
   font-family: var(--helper--font);
@@ -136,6 +136,11 @@ h4 {
 
 .logo span {
   color: var(--primary-brand-color);
+}
+
+.nav {
+  display: flex;
+  gap: 76px;
 }
 
 .nav ul {
@@ -182,7 +187,7 @@ h4 {
   background-color: var(--pressed-state-color);
 }
 
-.contact-information {
+.contact-information ul {
   display: flex;
   align-items: center;
   gap: 40px;
@@ -204,16 +209,14 @@ h4 {
 /* Index page */
 .hero {
   padding: 188px 0;
-  display: flex;
-  flex-direction: column;
-  gap: 48px;
-  align-items: center;
   background-image: linear-gradient(
-    to bottom,
-    rgba(46,47,66, .7),
-    rgba(46,47,66, .7)
+        to bottom,
+        rgba(46,47,66, .7),
+        rgba(46,47,66, .7)
     ),
     url(../images/hero-bg.jpg);
+  max-width: 1440px;
+  margin: 0 auto;
   background-size: auto 100%;
   background-position: top right, center;
   background-repeat: repeat-x, no-repeat;
@@ -223,6 +226,12 @@ h4 {
   max-width: 496px;
   text-align: center;
   color: var(--white-background-color);
+  margin: 0 auto 48px;
+}
+
+.hero .button {
+  display: block;
+  margin: 0 auto;
 }
 
 .decision {
@@ -237,12 +246,13 @@ h4 {
 }
 
 .decision ul li {
-  display: flex;
-  flex-direction: column;
   flex-shrink: 0;
   width: 100%;
   max-width: 264px;
-  gap: 8px;
+}
+
+.decision h3 {
+  margin-bottom: 8px;
 }
 
 .decision .icon {
@@ -252,6 +262,7 @@ h4 {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-bottom: 8px;
 }
 
 .projects {
@@ -292,11 +303,14 @@ h4 {
 }
 
 .team__information {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  text-align: center;
   padding: 32px 16px;
-  gap: 8px;
+}
+
+
+.team__information h3,
+.team__information p {
+  margin-bottom: 8px;
 }
 
 .customers {
@@ -336,21 +350,16 @@ h4 {
   fill: var(--pressed-state-color)
 }
 
-  /* Portfolio Page */
+/* Portfolio Page */
 .portfolio {
   padding: 96px 0 120px;
 }
 
-.tabs {
-  display: flex;
-  flex-direction: column;
-  gap: 72px;
-}
-
-.tabs__controls {
+.tab-controls {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-bottom: 72px;
   gap: 24px;
 }
 
@@ -410,13 +419,13 @@ h4 {
   padding: 14px 36px;
 }
 
-.tabs__list {
+.tab-list {
   display: flex;
   flex-wrap: wrap;
   gap: 48px 24px;
 }
 
-.tabs__item {
+.tab-list__item {
   flex-shrink: 0;
   width: 100%;
   max-width: 360px;
@@ -426,9 +435,7 @@ h4 {
   display: flex;
   flex-direction: column;
   width: 100%;
-  transition-property: box-shadow;
-  transition-duration: 250ms;
-  transition-timing-function: var(--transition-function);
+  transition: box-shadow 250ms var(--transition-function);
 }
 
 .portfolio__image {
@@ -447,9 +454,7 @@ h4 {
   overflow: hidden;
   color: var(--white-background-color);
   transform: translateY(100%);
-  transition-property: transform;
-  transition-duration: 250ms;
-  transition-timing-function: var(--transition-function);
+  transition: transform 250ms var(--transition-function);
 }
 
 .portfolio__card:hover {
@@ -467,8 +472,11 @@ h4 {
   border-top: none;
 }
 
-.portfolio__information h3 {
+.portfolio__information h2 {
   margin-bottom: 8px;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.2em;
 }
 
 /* Footer */
@@ -476,26 +484,30 @@ h4 {
   background-color: var(--dark-color);
 }
 
-.footer__inner-wrapper {
+.footer .container {
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
-  padding: 100px 0;
+  padding: 100px 15px;
   color: var(--light-color);
 }
 
 .footer__information {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
   max-width: 264px;
-  gap: 16px;
   margin-right: 120px;
+}
+
+.footer__information .logo {
+  margin-bottom: 16px;
 }
 
 .footer__social {
   margin-right: 80px;
+}
+
+.footer__social p {
+  font-weight: 500;
+  margin-bottom: 16px;
 }
 
 .footer__title {
@@ -720,9 +732,9 @@ ul.social  {
   display: block;
   position: absolute;
   width: 18px;
-  height: 18px;
+  height: 24px;
   left: 16px;
-  top: 11px;
+  top: 8px;
   fill: var(--dark-color);
   transition: fill 250ms var(--transition-function);
 }

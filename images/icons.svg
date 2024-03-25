@@ -65,7 +65,7 @@
         </clipPath>
       </defs>
     </symbol>
-    <symbol id="icon-name" viewBox="0 0 18 18">
+    <symbol id="icon-name" viewBox="0 0 18 24">
       <g clip-path="url(#a)">
         <path d="M9 9a3 3 0 1 0 0-6 3 3 0 1 0 0 6Zm0 1.5c-2.003 0-6 1.005-6 3v.75c0 .412.337.75.75.75h10.5c.412 0 .75-.338.75-.75v-.75c0-1.995-3.998-3-6-3Z"/>
       </g>
